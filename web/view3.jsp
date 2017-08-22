@@ -4,7 +4,7 @@
     Author     : Administrator
 --%>
 
-<%@page import="com.hemmerling.aufgabe08c_personenverwaltung.model.business.PersonService"%>
+<%@page import="com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.business.PersonService"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Personenliste [Web Components ( aufgabe08c_personenverwaltung )]</title>
+        <title>Personenliste [Web Components ( aufgabe08ac_09a_personenverwaltung )]</title>
     </head>
     <body>
         <jsp:include page = "header.jsp" />

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hemmerling.aufgabe08c_personenverwaltung.model.business;
+package com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.business;
 
-import com.hemmerling.aufgabe08c_personenverwaltung.model.persistence.Person;
+import com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.persistence.Person;
 import java.util.ArrayList;
 import java.util.List;
 

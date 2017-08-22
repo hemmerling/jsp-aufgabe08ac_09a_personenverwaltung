@@ -16,7 +16,7 @@
      at Netbeans "Project Properties / Libraries / Compile-time Libraries"
 --%>
 
-<%@page import="com.hemmerling.aufgabe08c_personenverwaltung.model.business.PersonService"%>
+<%@page import="com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.business.PersonService"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -24,23 +24,27 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Personenliste [Web Components ( aufgabe08c_personenverwaltung )]</title>
+        <title>Personenliste [Web Components ( aufgabe08ac_09a_personenverwaltung )]</title>
     </head>
     <body>
         <jsp:include page = "header.jsp" />
         <h1>Personenliste 4</h1>
-
-        <c:set var = "salary" scope = "session" value = "${2000*2}"/>
-        <c:set var = "persons" scope = "session" value = "${sessionScope.personservice.get()}"/>
-        <c:choose>
+        <%--
+            sessionScope.personservice.get()
+        --%>
+        <c:set var = "persons" scope = "session" value = "${personservice.get()}"/>
+        <%--
+            In a c:choose, the first when for which the test is true is the winner. 
+        --%>
+        <c:choose >
             <c:when test = "${persons == null}">
             </c:when>
             <c:when test = "${persons.size() == 0}">
             </c:when>
             <c:when test = "${persons.size() > 0}">
-                <c:forEach begin="1" end="${sessionScope.personservice.get().size()}" step="1" var="ii">
-                <li>${ii-1}&nbsp;${sessionScope.personservice.get().get(ii-1)[0]}&nbsp;
-                    ${sessionScope.personservice.get().get(ii-1)[1]}&nbsp;
+                <c:forEach begin="1" end="${persons.size()}" step="1" var="ii">
+                <li>${ii-1}&nbsp;${persons.get(ii-1)[0]}&nbsp;
+                    ${persons.get(ii-1)[1]}&nbsp;
                     <a href="FrontController?action=delete&id=${ii-1}">Löschen</a>&nbsp;
                     <a href="FrontController?action=update&id=${ii-1}">Bearbeiten</a></li>
                 </c:forEach>
@@ -48,14 +52,6 @@
             <c:otherwise>
             </c:otherwise>
         </c:choose>
-
-        <%
-            PersonService personService = (PersonService) session.getAttribute("personservice");
-            List<String[]> persons = (ArrayList<String[]>) personService.get();
-            if (persons == null /* || items.isEmpty() */) {
-        %>
-        <% } else { %>
-        <% }%>
         <jsp:include page = "footer.jsp" />
 </body>
 </html>

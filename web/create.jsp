@@ -6,8 +6,8 @@
 <%@page import="java.util.Enumeration"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.io.PrintWriter"%>
-<%@page import="com.hemmerling.aufgabe08c_personenverwaltung.model.persistence.Person"%>
-<%@page import="com.hemmerling.aufgabe08c_personenverwaltung.model.business.*"%>
+<%@page import="com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.persistence.Person"%>
+<%@page import="com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.business.*"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -15,7 +15,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Person anlegen [Web Components ( aufgabe08c_personenverwaltung )]</title>
+        <title>Person anlegen [Web Components ( aufgabe08ac_09a_personenverwaltung )]</title>
     </head>
     <body>
         <jsp:include page = "header.jsp"/>

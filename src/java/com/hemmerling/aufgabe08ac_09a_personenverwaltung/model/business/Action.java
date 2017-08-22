@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hemmerling.aufgabe08c_personenverwaltung.model.business;
+package com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.business;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

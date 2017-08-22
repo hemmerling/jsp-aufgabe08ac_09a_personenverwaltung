@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hemmerling.aufgabe08c_personenverwaltung.controller;
+package com.hemmerling.aufgabe08ac_09a_personenverwaltung.controller;
 
-import com.hemmerling.aufgabe08c_personenverwaltung.model.business.Action;
-import com.hemmerling.aufgabe08c_personenverwaltung.model.business.PersonServiceImplementation;
-import com.hemmerling.aufgabe08c_personenverwaltung.model.business.PersonService;
+import com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.business.Action;
+import com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.business.PersonServiceImplementation;
+import com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.business.PersonService;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

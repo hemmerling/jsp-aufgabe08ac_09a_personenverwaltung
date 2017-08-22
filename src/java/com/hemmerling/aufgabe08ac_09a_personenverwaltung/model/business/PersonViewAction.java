@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hemmerling.aufgabe08c_personenverwaltung.model.business;
+package com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.business;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -18,14 +18,14 @@ import javax.servlet.http.HttpServletResponse;
  * @throws ServletException
  * @throws IOException
  */
-public class PersonViewAction3 implements Action {
+public class PersonViewAction implements Action {
 
-    private static final String VIEWPAGE3 = "view3.jsp";
+    private static final String VIEWPAGE = "view.jsp";
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(VIEWPAGE3);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(VIEWPAGE);
         requestDispatcher.forward(request, response);
     }
 }

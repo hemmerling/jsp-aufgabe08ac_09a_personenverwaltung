@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hemmerling.aufgabe08c_personenverwaltung.model.business;
+package com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.business;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.hemmerling.aufgabe08c_personenverwaltung.model.persistence.Person;
+import com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.persistence.Person;
 
 /**
  *
  * @author Administrator
  */
-public class PersonSaveAction implements Action {
+public class PersonSaveAction4 implements Action {
 
     // Parameter
     private static final String VORNAME = "vorname";
@@ -33,11 +33,11 @@ public class PersonSaveAction implements Action {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String vorname = request.getParameter(VORNAME);
-        String nachname = request.getParameter(NACHNAME);
+        Person person = (Person) request.getSession().getAttribute("person4");
+        String vorname = person.getVorname();
+        String nachname = person.getNachname();
         if ((vorname != null && !vorname.trim().isEmpty())
                 & (nachname != null && !nachname.trim().isEmpty())) {
-            Person person = new Person(vorname, nachname);
             PersonServiceImplementation personService = PersonServiceImplementation.getInstance(); // Singleton
             personService.add(person);
         }

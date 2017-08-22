@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <jsp:useBean id="person3" scope="session" class="com.hemmerling.aufgabe08c_personenverwaltung.model.persistence.Person"></jsp:useBean>  
+        <jsp:useBean id="person3" scope="session" class="com.hemmerling.aufgabe08ac_09a_personenverwaltung.model.persistence.Person"></jsp:useBean>  
         <jsp:setProperty property="*" name="person3"/>  
         <jsp:forward page="FrontController">
             <jsp:param name="action" value="create3"/>
